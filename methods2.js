@@ -119,6 +119,7 @@ app.post('/login', async (req, res) => {
     // Send the token as response
     res.json({ token });
   } catch (err) {
+    console.error('Error logging in:', err);
     console.error(err);
     res.status(500).send('Error logging in');
   }
