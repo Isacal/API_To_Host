@@ -9,13 +9,21 @@ app.use(bodyParser.json());
 app.use(express.json());
 const port = 2500; // Adjust port number as needed
 
-// Database credentials
+//Database credentials
 const pool = mysql.createPool({
   host: 'bvm2trbk2dj0hy002lq0-mysql.services.clever-cloud.com',
   user: 'u5m01wdyayoajblp',
-  password: 'u5m01wdyayoajblp',
+  password: 'vz8xg3FsMitPc6XGrTVO',
   database: 'bvm2trbk2dj0hy002lq0'
 });
+
+// const pool = mysql.createPool({
+//   host: 'localhost',
+//   user: 'root',
+//   password: '',
+//   database: 'student_attendance'
+// });
+
 
 // Middleware to verify token
 const verifyToken = (req, res, next) => {
